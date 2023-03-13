@@ -36,24 +36,21 @@ function printScore(playerScore, computerScore)
 function game() 
 {
     let playerScore = computerScore = 0;
-    for (let i = 0; i < 5; i++) 
+    let input = prompt("Rock, Paper, or Scissors?", 'Rock');
+    let round = playRound(input, getComputerChoice());
+
+    console.log(round);
+    
+    if (round.charAt(4) == 'W')
     {
-        let input = prompt("Rock, Paper, or Scissors?", 'Rock');
-        let round = playRound(input, getComputerChoice());
-
-        console.log(round);
-        
-        if (round.charAt(4) == 'W')
-        {
-            playerScore++;
-        }
-        else if (round.charAt(4) == 'L')
-        {
-            computerScore++;
-        }
-
-        printScore(playerScore, computerScore);
+        playerScore++;
     }
+    else if (round.charAt(4) == 'L')
+    {
+        computerScore++;
+    }
+
+    printScore(playerScore, computerScore);
 
     if (playerScore > computerScore) 
     {
@@ -69,4 +66,10 @@ function game()
     }
 }
 
-game();
+const btns = document.querySelectorAll("button");
+
+btns.forEach(btn => {
+    btn.addEventListener("click", () => {
+        console.log(playRound(btn.id, getComputerChoice()));
+    })
+});
