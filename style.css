@@ -1,0 +1,48 @@
+body {
+    font-family: "Courier New", Roboto, sans-serif;
+    background-color: rgb(247, 243, 239);
+}
+
+button {
+    font-family: inherit;
+}
+
+.container {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.result-message {
+    font-size: 30px;
+}
+
+.typed-out {
+    overflow: hidden;
+    border-right: 3px solid black;
+    width: 0;
+    animation: typing 1s steps(20, end) forwards, blinking 1s steps(1, end) infinite;
+    white-space: nowrap;
+}
+
+.result-box {
+    display: inline-block;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blinking {
+    0% { border-right-color: transparent }
+    50% { border-right-color: black }
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+#reset {
+    display: none;
+}

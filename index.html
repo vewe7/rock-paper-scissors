@@ -3,15 +3,23 @@
   <head>
     <meta charset="UTF-8">
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
-    <div class="score">0 - 0</div>
-    <div class="result-message"></div>
-
-    <button data-choice="0" type="button" id="Rock">Rock</button>
-    <button data-choice="1" type="button" id="Paper">Paper</button>
-    <button data-choice="2" type="button" id="Scissors">Scissors</button>
+    <h1>ROCK PAPER SCISSORS</h1>
+    <div class="container">
+      <div class="output">
+        <div class="score">0 - 0</div>
+        <div class="result-box"><div class="result-message typed-out">ROCK PAPER SCISSORS</div></div>
+      </div>
+      <div class="buttons">
+        <button data-choice="0" type="button" id="Rock">Rock</button>
+        <button data-choice="1" type="button" id="Paper">Paper</button>
+        <button data-choice="2" type="button" id="Scissors">Scissors</button>
+      </div>
+      <button type="button" id="reset">NEW GAME</button>
+    </div>
 
     <script src="script.js"></script>
   </body>
