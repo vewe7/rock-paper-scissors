@@ -17,17 +17,11 @@ function getComputerChoice()
 function playRound(player, computer) 
 {
     if (player == computer)
-    {
         return -1;
-    }  
     else if ((player + 1) % 3 == computer)
-    {
         return 0;
-    }
-    else 
-    {
+    else
         return 1;
-    }
 }
 
 function printScore(playerScore, computerScore)
@@ -52,16 +46,16 @@ function updateGame(res, player, computer, resDiv, scoreDiv)
 {
     if (res == -1)
     {
-        updateResult(resDiv, "It's a Tie! " + choiceStr[player] + " against " + choiceStr[computer]);
+        updateResult(resDiv, "It's a Tie! " + choiceStr[player] + " against " + choiceStr[computer] + ".");
     }
     else if (res == 0)
     {
-        updateResult(resDiv, "You Lose! " + choiceStr[computer] + " beats " + choiceStr[player]);
+        updateResult(resDiv, "You Lose! " + choiceStr[computer] + " beats " + choiceStr[player] + ".");
         computerScore++;
     }
     else 
     {
-        updateResult(resDiv, "You Win! " + choiceStr[player] + " beats " + choiceStr[computer]);
+        updateResult(resDiv, "You Win! " + choiceStr[player] + " beats " + choiceStr[computer] + ".");
         playerScore++;
     }
 
